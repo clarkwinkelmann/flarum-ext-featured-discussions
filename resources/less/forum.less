@@ -1,0 +1,77 @@
+.Badge--featured {
+    background: #d13e32;
+}
+
+.FeaturedScheduleDiscussion {
+    cursor: move;
+
+    .DiscussionListItem {
+        margin: 0;
+    }
+}
+
+.FeaturedScheduleDate {
+    margin: 5px 0;
+    font-weight: bold;
+
+    em {
+        font-style: normal;
+        font-weight: normal;
+    }
+}
+
+.FeaturedScheduleDrop {
+    border: 2px dashed #ddd;
+    border-radius: 5px;
+    position: relative;
+    padding: 5px;
+
+    &.valid-drop,
+    &.invalid-drop {
+        .FeaturedScheduleDropEmpty {
+            opacity: 0;
+        }
+    }
+
+    &.valid-drop {
+        border-color: #333;
+        background: #eee;
+
+        .FeaturedScheduleDropHere {
+            display: block;
+        }
+    }
+
+    &.invalid-drop {
+        border-color: red;
+        background: #ff9f9f;
+
+        .FeaturedScheduleDropError {
+            display: block;
+        }
+    }
+}
+
+.FeaturedScheduleDropEmpty {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.FeaturedScheduleDropHere,
+.FeaturedScheduleDropError {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15px;
+    display: none;
+    text-align: center;
+}
+
+.FeaturedScheduleDropError {
+    color: red;
+}
+
+.FeaturedScheduleCustom {
+    color: #888;
+    font-weight: normal;
+}
